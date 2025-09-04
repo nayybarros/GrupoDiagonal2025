@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0081)file:///C:/Users/nayarabarros/Downloads/INFORMACAO_GRUPO_DIAGONAL_V12_PRONTO.html -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!-- saved from url=(0081)file:///C:/Users/nayarabarros/Downloads/INFORMACAO_GRUPO_DIAGONAL_V12_PRONTO.html -->
+<html lang="pt-BR"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Análise Executiva Corporativa - Agosto 2025</title>
 <style>
         * {
@@ -417,7 +417,65 @@
             .empreendimento-table th,
             .empreendimento-table td { padding: 8px; }
         }
-    </style>
+    </style><style>
+/* === Responsive Mobile Overrides (2025-09-04) === */
+:root{
+  --pad-mobile: 14px;
+  --radius-lg: 16px;
+}
+
+/* Container: remove fixed max-width on small screens, add breathing room */
+@media (max-width: 768px){
+  body{ padding: var(--pad-mobile); }
+  .container{ max-width: 100% !important; border-radius: var(--radius-lg); }
+  .header{ padding: 18px !important; }
+  .header h1{ font-size: clamp(1.25rem, 3.5vw, 1.75rem) !important; line-height: 1.15; }
+  .header p{ font-size: clamp(0.85rem, 2.8vw, 1rem) !important; }
+
+  .nav-tabs{ gap: 6px; padding: 6px var(--pad-mobile); overflow-y: hidden; scrollbar-width: thin; }
+  .nav-tab{ padding: 10px 14px !important; font-size: 0.95rem !important; border-radius: 999px; flex: 0 0 auto; }
+
+  .tab-content{ padding: var(--pad-mobile) !important; }
+
+  /* Summary grid: smaller cards that stack nicely */
+  .summary-grid{ 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important; 
+    gap: 14px !important;
+    margin-bottom: 20px !important;
+  }
+  .summary-card{ padding: 16px !important; border-radius: 12px !important; }
+
+  /* Quarter cards */
+  .quarterly-grid{ grid-template-columns: 1fr !important; gap: 12px !important; }
+  .quarterly-card{ padding: 14px !important; border-radius: 12px !important; }
+
+  /* Filters: wrap and enlarge touch targets */
+  .filter-container{ padding: 14px !important; }
+  .filter-buttons{ gap: 8px !important; }
+  .filter-btn{ padding: 12px 14px !important; min-height: 44px; font-size: 0.95rem !important; }
+
+  /* Insight card spacing */
+  .insight-card{ padding: 14px !important; margin: 12px 0 !important; }
+
+  /* Tables: make horizontally scrollable with sticky headers */
+  .table-responsive{ width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; }
+  .empreendimento-table{ min-width: 720px; font-size: 0.9rem !important; }
+  .empreendimento-table th, .empreendimento-table td{ padding: 10px 12px !important; }
+  .empreendimento-table thead th{ position: sticky; top: 0; z-index: 1; }
+}
+
+/* Even smaller devices */
+@media (max-width: 420px){
+  .nav-tab{ font-size: 0.9rem !important; padding: 9px 12px !important; }
+  .card-value{ font-size: 1.35rem !important; }
+  .card-title{ font-size: 1rem !important; }
+  .quarterly-title{ font-size: 1rem !important; }
+  .quarterly-value{ font-size: 1.25rem !important; }
+}
+</style><style>
+.status-badge{ line-height: 1; padding: 8px 12px !important; border-radius: 999px !important; }
+</style>
 </head>
 <body>
 <div class="container">
@@ -426,9 +484,9 @@
 <p>Performance ATÉ AGOSTO 2025 • Consolidação de Dados • Atualização: 03/09/2025</p>
 </div>
 <div class="nav-tabs">
-<button class="nav-tab active" onclick="showTab(&#39;consolidacao&#39;)">🎯 Consolidação</button>
-<button class="nav-tab" onclick="showTab(&#39;tabela-metas&#39;)">📋 Meta x Realizado</button>
-<button class="nav-tab" onclick="showTab(&#39;insights&#39;)">💡 Insights</button>
+<button class="nav-tab active" onclick="showTab('consolidacao')">🎯 Consolidação</button>
+<button class="nav-tab" onclick="showTab('tabela-metas')">📋 Meta x Realizado</button>
+<button class="nav-tab" onclick="showTab('insights')">💡 Insights</button>
 </div>
 <!-- TAB 1: CONSOLIDAÇÃO -->
 <div class="tab-content active" id="consolidacao">
@@ -437,9 +495,9 @@
                     🏢 Filtrar por Empresa
                 </div>
 <div class="filter-buttons">
-<button class="filter-btn active" onclick="filterData(&#39;ALL&#39;, &#39;consolidacao&#39;);setVSO(&#39;ALL&#39;);" style="transform: translateY(-2px);">📊 VICTA/DIAGONAL</button>
-<button class="filter-btn" onclick="filterData(&#39;VICTA&#39;, &#39;consolidacao&#39;);setVSO(&#39;VICTA&#39;);" style="transform: translateY(0px);">🏙️ VICTA</button>
-<button class="filter-btn" onclick="filterData(&#39;DIAGONAL&#39;, &#39;consolidacao&#39;);setVSO(&#39;DIAGONAL&#39;);" style="transform: translateY(-2px);">🏗️ DIAGONAL</button>
+<button class="filter-btn active" onclick="filterData('ALL', 'consolidacao');setVSO('ALL');" style="transform: translateY(-2px);">📊 VICTA/DIAGONAL</button>
+<button class="filter-btn" onclick="filterData('VICTA', 'consolidacao');setVSO('VICTA');" style="transform: translateY(0px);">🏙️ VICTA</button>
+<button class="filter-btn" onclick="filterData('DIAGONAL', 'consolidacao');setVSO('DIAGONAL');" style="transform: translateY(-2px);">🏗️ DIAGONAL</button>
 </div>
 </div>
 <div class="summary-grid">
@@ -495,16 +553,15 @@
 </div>
 <div class="quarterly-grid" id="vso-cards" style="margin-top: 10px;">
 <div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
-  <div class="quarterly-title">VSO (3TRI)</div>
-  <div class="quarterly-value" id="vso-3tri">13,47%</div>
-  <div class="quarterly-subtitle">3º trimestre</div>
+<div class="quarterly-title">VSO (3TRI)</div>
+<div class="quarterly-value" id="vso-3tri">13,47%</div>
+<div class="quarterly-subtitle">3º trimestre</div>
 </div>
 <div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
-  <div class="quarterly-title">VSO (4TRI)</div>
-  <div class="quarterly-value" id="vso-4tri">0,00%</div>
-  <div class="quarterly-subtitle">4º trimestre</div>
+<div class="quarterly-title">VSO (4TRI)</div>
+<div class="quarterly-value" id="vso-4tri">0,00%</div>
+<div class="quarterly-subtitle">4º trimestre</div>
 </div>
-
 <div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
 <div class="quarterly-title">VSO (Mês)</div>
 <div class="quarterly-value" id="vso-mes">6,63%</div>
@@ -528,7 +585,7 @@
 </div>
 <div class="insight-card">
 <div class="insight-title">🎯 Destaque de Performance</div>
-<p>O mês de Agosto apresentou excelente performance com <strong>108% de atingimento da meta</strong></div>
+<p>O mês de Agosto apresentou excelente performance com <strong>108% de atingimento da meta</strong></p></div>
 </div>
 </div>
 </div>
@@ -539,9 +596,9 @@
                     🏢 Filtrar por Empresa
                 </div>
 <div class="filter-buttons">
-<button class="filter-btn" onclick="filterTable(&#39;ALL&#39;)">📊 VICTA/DIAGONAL</button>
-<button class="filter-btn" onclick="filterTable(&#39;VICTA&#39;)">🏙️ VICTA</button>
-<button class="filter-btn active" onclick="filterTable(&#39;DIAGONAL&#39;)" style="transform: translateY(-2px);">🏗️ DIAGONAL</button>
+<button class="filter-btn" onclick="filterTable('ALL')">📊 VICTA/DIAGONAL</button>
+<button class="filter-btn" onclick="filterTable('VICTA')">🏙️ VICTA</button>
+<button class="filter-btn active" onclick="filterTable('DIAGONAL')" style="transform: translateY(-2px);">🏗️ DIAGONAL</button>
 </div>
 </div>
 <div class="section">
@@ -549,7 +606,7 @@
                     📋 Performance por Empreendimento - Agosto 2025
                 </div>
 <div class="section-content">
-<table class="empreendimento-table">
+<div class="table-responsive"><table class="empreendimento-table">
 <thead>
 <tr>
 <th>Empreendimento</th>
@@ -565,465 +622,464 @@
 </tr>
 </thead>
 <tbody>
-
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Alta Vista Passare</strong></td>
-  <td>VICTA</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>Alta Vista Passare</strong></td>
+<td>VICTA</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Mirante Condominio Clube</strong></td>
-  <td>VICTA</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>Mirante Condominio Clube</strong></td>
+<td>VICTA</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Belvedere Condomínio Clube</strong></td>
-  <td>VICTA</td>
-  <td>10</td>
-  <td>8</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">80%</span></td>
-  <td>0.13</td>
-  <td>R$ 3.278.388</td>
-  <td>R$ 2.790.649</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 80%;">80%</div>
-    </div></td>
+<td><strong>Belvedere Condomínio Clube</strong></td>
+<td>VICTA</td>
+<td>10</td>
+<td>8</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">80%</span></td>
+<td>0.13</td>
+<td>R$ 3.278.388</td>
+<td>R$ 2.790.649</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 80%;">80%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Vitória Caucaia</strong></td>
-  <td>VICTA</td>
-  <td>0</td>
-  <td>2</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>0.66</td>
-  <td>R$ 0</td>
-  <td>R$ 404.797</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">EXTRA</div>
-    </div></td>
+<td><strong>Vitória Caucaia</strong></td>
+<td>VICTA</td>
+<td>0</td>
+<td>2</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>0.66</td>
+<td>R$ 0</td>
+<td>R$ 404.797</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">EXTRA</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Vista Mar Condomínio Clube</strong></td>
-  <td>VICTA</td>
-  <td>9</td>
-  <td>3</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">33%</span></td>
-  <td>0.11</td>
-  <td>R$ 3.200.992</td>
-  <td>R$ 1.144.042</td>
-  <td><span class="status-badge critico">ABAIXO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill critical" style="width: 33%;">33%</div>
-    </div></td>
+<td><strong>Vista Mar Condomínio Clube</strong></td>
+<td>VICTA</td>
+<td>9</td>
+<td>3</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">33%</span></td>
+<td>0.11</td>
+<td>R$ 3.200.992</td>
+<td>R$ 1.144.042</td>
+<td><span class="status-badge critico">ABAIXO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 33%;">33%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Vitória Mondubim</strong></td>
-  <td>VICTA</td>
-  <td>0</td>
-  <td>1</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 220.004</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">EXTRA</div>
-    </div></td>
+<td><strong>Vitória Mondubim</strong></td>
+<td>VICTA</td>
+<td>0</td>
+<td>1</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 220.004</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">EXTRA</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VISTA PARQUE CONDOMÍNIO CLUBE</strong></td>
-  <td>VICTA</td>
-  <td>10</td>
-  <td>9</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">90%</span></td>
-  <td>0.06</td>
-  <td>R$ 3.317.538</td>
-  <td>R$ 2.937.661</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 90%;">90%</div>
-    </div></td>
+<td><strong>VISTA PARQUE CONDOMÍNIO CLUBE</strong></td>
+<td>VICTA</td>
+<td>10</td>
+<td>9</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">90%</span></td>
+<td>0.06</td>
+<td>R$ 3.317.538</td>
+<td>R$ 2.937.661</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 90%;">90%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>JÓQUEI CONDOMÍNIO CLUBE</strong></td>
-  <td>VICTA</td>
-  <td>11</td>
-  <td>10</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">91%</span></td>
-  <td>0.05</td>
-  <td>R$ 3.937.164</td>
-  <td>R$ 3.617.531</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 90%;">91%</div>
-    </div></td>
+<td><strong>JÓQUEI CONDOMÍNIO CLUBE</strong></td>
+<td>VICTA</td>
+<td>11</td>
+<td>10</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">91%</span></td>
+<td>0.05</td>
+<td>R$ 3.937.164</td>
+<td>R$ 3.617.531</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 90%;">91%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA ACÁCIA</strong></td>
-  <td>VICTA</td>
-  <td>11</td>
-  <td>7</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">64%</span></td>
-  <td>0.27</td>
-  <td>R$ 2.397.018</td>
-  <td>R$ 1.518.870</td>
-  <td><span class="status-badge critico">ABAIXO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill critical" style="width: 63%;">64%</div>
-    </div></td>
+<td><strong>VITÓRIA ACÁCIA</strong></td>
+<td>VICTA</td>
+<td>11</td>
+<td>7</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">64%</span></td>
+<td>0.27</td>
+<td>R$ 2.397.018</td>
+<td>R$ 1.518.870</td>
+<td><span class="status-badge critico">ABAIXO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 63%;">64%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA SENNA</strong></td>
-  <td>VICTA</td>
-  <td>11</td>
-  <td>3</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">27%</span></td>
-  <td>1.51</td>
-  <td>R$ 2.316.341</td>
-  <td>R$ 652.000</td>
-  <td><span class="status-badge critico">ABAIXO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill critical" style="width: 27%;">27%</div>
-    </div></td>
+<td><strong>VITÓRIA SENNA</strong></td>
+<td>VICTA</td>
+<td>11</td>
+<td>3</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">27%</span></td>
+<td>1.51</td>
+<td>R$ 2.316.341</td>
+<td>R$ 652.000</td>
+<td><span class="status-badge critico">ABAIXO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 27%;">27%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>ATLÂNTICO CONDOMINIO CLUBE</strong></td>
-  <td>VICTA</td>
-  <td>13</td>
-  <td>13</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>0.05</td>
-  <td>R$ 4.561.386</td>
-  <td>R$ 4.916.436</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">100%</div>
-    </div></td>
+<td><strong>ATLÂNTICO CONDOMINIO CLUBE</strong></td>
+<td>VICTA</td>
+<td>13</td>
+<td>13</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>0.05</td>
+<td>R$ 4.561.386</td>
+<td>R$ 4.916.436</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VISTA COSTEIRA CUMBUCO</strong></td>
-  <td>VICTA</td>
-  <td>11</td>
-  <td>28</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">255%</span></td>
-  <td>0.00</td>
-  <td>R$ 3.527.045</td>
-  <td>R$ 9.957.787</td>
-  <td><span class="status-badge positivo">EXCELENTE</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">255%</div>
-    </div></td>
+<td><strong>VISTA COSTEIRA CUMBUCO</strong></td>
+<td>VICTA</td>
+<td>11</td>
+<td>28</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">255%</span></td>
+<td>0.00</td>
+<td>R$ 3.527.045</td>
+<td>R$ 9.957.787</td>
+<td><span class="status-badge positivo">EXCELENTE</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">255%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA EUSEBIO</strong></td>
-  <td>VICTA</td>
-  <td>16</td>
-  <td>32</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
-  <td>0.00</td>
-  <td>R$ 3.121.560</td>
-  <td>R$ 6.431.897</td>
-  <td><span class="status-badge positivo">EXCELENTE</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">200%</div>
-    </div></td>
+<td><strong>VITÓRIA EUSEBIO</strong></td>
+<td>VICTA</td>
+<td>16</td>
+<td>32</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+<td>0.00</td>
+<td>R$ 3.121.560</td>
+<td>R$ 6.431.897</td>
+<td><span class="status-badge positivo">EXCELENTE</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">200%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA MARACANAÚ</strong></td>
-  <td>VICTA</td>
-  <td>17</td>
-  <td>16</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">94%</span></td>
-  <td>0.00</td>
-  <td>R$ 3.401.700</td>
-  <td>R$ 3.330.666</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 94%;">94%</div>
-    </div></td>
+<td><strong>VITÓRIA MARACANAÚ</strong></td>
+<td>VICTA</td>
+<td>17</td>
+<td>16</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">94%</span></td>
+<td>0.00</td>
+<td>R$ 3.401.700</td>
+<td>R$ 3.330.666</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 94%;">94%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA ÍRIS</strong></td>
-  <td>VICTA</td>
-  <td>22</td>
-  <td>18</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">82%</span></td>
-  <td>0.00</td>
-  <td>R$ 4.854.538</td>
-  <td>R$ 3.844.200</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 81%;">82%</div>
-    </div></td>
+<td><strong>VITÓRIA ÍRIS</strong></td>
+<td>VICTA</td>
+<td>22</td>
+<td>18</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">82%</span></td>
+<td>0.00</td>
+<td>R$ 4.854.538</td>
+<td>R$ 3.844.200</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 81%;">82%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>Q TOWER CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>4</td>
-  <td>2</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">50%</span></td>
-  <td>0.02</td>
-  <td>R$ 20.103.984</td>
-  <td>R$ 19.503.457</td>
-  <td><span class="status-badge critico">ABAIXO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill critical" style="width: 50%;">50%</div>
-    </div></td>
+<td><strong>Q TOWER CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>4</td>
+<td>2</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">50%</span></td>
+<td>0.02</td>
+<td>R$ 20.103.984</td>
+<td>R$ 19.503.457</td>
+<td><span class="status-badge critico">ABAIXO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 50%;">50%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>OCEAN GARDEN CUMBUCO</strong></td>
-  <td>DIAGONAL</td>
-  <td>2</td>
-  <td>4</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
-  <td>0.07</td>
-  <td>R$ 2.678.516</td>
-  <td>R$ 10.552.182</td>
-  <td><span class="status-badge positivo">EXCELENTE</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">200%</div>
-    </div></td>
+<td><strong>OCEAN GARDEN CUMBUCO</strong></td>
+<td>DIAGONAL</td>
+<td>2</td>
+<td>4</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+<td>0.07</td>
+<td>R$ 2.678.516</td>
+<td>R$ 10.552.182</td>
+<td><span class="status-badge positivo">EXCELENTE</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">200%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>OCEAN GARDEN</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>2</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
-  <td>0.16</td>
-  <td>R$ 2.588.351</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge positivo">EXCELENTE</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">200%</div>
-    </div></td>
+<td><strong>OCEAN GARDEN</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>2</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+<td>0.16</td>
+<td>R$ 2.588.351</td>
+<td>R$ 0</td>
+<td><span class="status-badge positivo">EXCELENTE</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">200%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>IVENS MONUMENTAL</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>IVENS MONUMENTAL</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>DIAGONAL BY PININFARINA</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>1</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>0.14</td>
-  <td>R$ 0</td>
-  <td>R$ 8.765.788</td>
-  <td><span class="status-badge positivo">BOM</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">EXTRA</div>
-    </div></td>
+<td><strong>DIAGONAL BY PININFARINA</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>1</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>0.14</td>
+<td>R$ 0</td>
+<td>R$ 8.765.788</td>
+<td><span class="status-badge positivo">BOM</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">EXTRA</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>CONNECT BEIRA MAR</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>9</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">900%</span></td>
-  <td>0.81</td>
-  <td>R$ 521.014</td>
-  <td>R$ 4.390.000</td>
-  <td><span class="status-badge positivo">EXCELENTE</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">900%</div>
-    </div></td>
+<td><strong>CONNECT BEIRA MAR</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>9</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">900%</span></td>
+<td>0.81</td>
+<td>R$ 521.014</td>
+<td>R$ 4.390.000</td>
+<td><span class="status-badge positivo">EXCELENTE</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">900%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>EDGE CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">nan%</span></td>
-  <td>0.00</td>
-  <td>R$ 6.683.806</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>EDGE CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">nan%</span></td>
+<td>0.00</td>
+<td>R$ 6.683.806</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>ICON CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>ICON CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>LEGACY CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>LEGACY CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>AVULSO ROSSI</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>AVULSO ROSSI</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>AVULSO DIAGONAL</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>0.00</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>AVULSO DIAGONAL</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>0.00</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="NAN" style="display: none;">
-  <td><strong>nan</strong></td>
-  <td>NAN</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
-  <td>nan</td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td><span class="status-badge">SEM META</span></td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>nan</strong></td>
+<td>NAN</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+<td>nan</td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td><span class="status-badge">SEM META</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr class="total-row" data-empresa="VICTA" style="display: none;">
-  <td><strong>TOTAL VICTA</strong></td>
-  <td><strong>VICTA</strong></td>
-  <td><strong>141</strong></td>
-  <td><strong>150</strong></td>
-  <td><strong><span style="color: #0a4d3a;">106%</span></strong></td>
-  <td>-</td>
-  <td><strong>R$ 37.913.671</strong></td>
-  <td><strong>R$ 41.766.540</strong></td>
-  <td><span class="status-badge positivo">SUCESSO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">106%</div>
-    </div></td>
+<td><strong>TOTAL VICTA</strong></td>
+<td><strong>VICTA</strong></td>
+<td><strong>141</strong></td>
+<td><strong>150</strong></td>
+<td><strong><span style="color: #0a4d3a;">106%</span></strong></td>
+<td>-</td>
+<td><strong>R$ 37.913.671</strong></td>
+<td><strong>R$ 41.766.540</strong></td>
+<td><span class="status-badge positivo">SUCESSO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">106%</div>
+</div></td>
 </tr>
 <tr class="total-row" data-empresa="DIAGONAL">
-  <td><strong>TOTAL DIAGONAL</strong></td>
-  <td><strong>DIAGONAL</strong></td>
-  <td><strong>9</strong></td>
-  <td><strong>18</strong></td>
-  <td><strong><span style="color: #0a4d3a;">200%</span></strong></td>
-  <td>-</td>
-  <td><strong>R$ 32.575.671</strong></td>
-  <td><strong>R$ 34.087.777</strong></td>
-  <td><span class="status-badge positivo">SUCESSO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">200%</div>
-    </div></td>
+<td><strong>TOTAL DIAGONAL</strong></td>
+<td><strong>DIAGONAL</strong></td>
+<td><strong>9</strong></td>
+<td><strong>18</strong></td>
+<td><strong><span style="color: #0a4d3a;">200%</span></strong></td>
+<td>-</td>
+<td><strong>R$ 32.575.671</strong></td>
+<td><strong>R$ 34.087.777</strong></td>
+<td><span class="status-badge positivo">SUCESSO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">200%</div>
+</div></td>
 </tr>
 <tr class="total-row" data-empresa="AMBAS" style="display: none;">
-  <td><strong>TOTAL GERAL</strong></td>
-  <td><strong>AMBAS</strong></td>
-  <td><strong>150</strong></td>
-  <td><strong>168</strong></td>
-  <td><strong><span style="color: #0a4d3a;">112%</span></strong></td>
-  <td>-</td>
-  <td><strong>R$ 70.489.342</strong></td>
-  <td><strong>R$ 75.854.317</strong></td>
-  <td><span class="status-badge positivo">SUCESSO</span></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">112%</div>
-    </div></td>
+<td><strong>TOTAL GERAL</strong></td>
+<td><strong>AMBAS</strong></td>
+<td><strong>150</strong></td>
+<td><strong>168</strong></td>
+<td><strong><span style="color: #0a4d3a;">112%</span></strong></td>
+<td>-</td>
+<td><strong>R$ 70.489.342</strong></td>
+<td><strong>R$ 75.854.317</strong></td>
+<td><span class="status-badge positivo">SUCESSO</span></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">112%</div>
+</div></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <div class="section" style="margin-top: 40px;">
 <div class="section-header">
                             📈 Performance Anual Consolidada - Até Agosto 2025
                         </div>
 <div class="section-content">
-<table class="empreendimento-table">
+<div class="table-responsive"><table class="empreendimento-table">
 <thead>
 <tr>
 <th>Empreendimento</th>
@@ -1037,399 +1093,398 @@
 </tr>
 </thead>
 <tbody>
-
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Alta Vista Passare</strong></td>
-  <td>VICTA</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>Alta Vista Passare</strong></td>
+<td>VICTA</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Mirante Condominio Clube</strong></td>
-  <td>VICTA</td>
-  <td>1</td>
-  <td>3</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">300%</span></td>
-  <td>R$ 354.999</td>
-  <td>R$ 1.064.997</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">300%</div>
-    </div></td>
+<td><strong>Mirante Condominio Clube</strong></td>
+<td>VICTA</td>
+<td>1</td>
+<td>3</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">300%</span></td>
+<td>R$ 354.999</td>
+<td>R$ 1.064.997</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">300%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Belvedere Condomínio Clube</strong></td>
-  <td>VICTA</td>
-  <td>77</td>
-  <td>92</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">119%</span></td>
-  <td>R$ 25.200.702</td>
-  <td>R$ 31.117.367</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">119%</div>
-    </div></td>
+<td><strong>Belvedere Condomínio Clube</strong></td>
+<td>VICTA</td>
+<td>77</td>
+<td>92</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">119%</span></td>
+<td>R$ 25.200.702</td>
+<td>R$ 31.117.367</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">119%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Vitória Caucaia</strong></td>
-  <td>VICTA</td>
-  <td>2</td>
-  <td>10</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">500%</span></td>
-  <td>R$ 403.417</td>
-  <td>R$ 2.050.391</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">500%</div>
-    </div></td>
+<td><strong>Vitória Caucaia</strong></td>
+<td>VICTA</td>
+<td>2</td>
+<td>10</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">500%</span></td>
+<td>R$ 403.417</td>
+<td>R$ 2.050.391</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">500%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Vista Mar Condomínio Clube</strong></td>
-  <td>VICTA</td>
-  <td>72</td>
-  <td>63</td>
-  <td><span style="color: #ffc107; font-weight: bold;">88%</span></td>
-  <td>R$ 25.563.189</td>
-  <td>R$ 22.238.827</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 87%;">88%</div>
-    </div></td>
+<td><strong>Vista Mar Condomínio Clube</strong></td>
+<td>VICTA</td>
+<td>72</td>
+<td>63</td>
+<td><span style="color: #ffc107; font-weight: bold;">88%</span></td>
+<td>R$ 25.563.189</td>
+<td>R$ 22.238.827</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 87%;">88%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>Vitória Mondubim</strong></td>
-  <td>VICTA</td>
-  <td>0</td>
-  <td>6</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>R$ 0</td>
-  <td>R$ 1.332.192</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">100%</div>
-    </div></td>
+<td><strong>Vitória Mondubim</strong></td>
+<td>VICTA</td>
+<td>0</td>
+<td>6</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>R$ 0</td>
+<td>R$ 1.332.192</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VISTA PARQUE CONDOMÍNIO CLUBE</strong></td>
-  <td>VICTA</td>
-  <td>77</td>
-  <td>77</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>R$ 25.501.649</td>
-  <td>R$ 25.251.718</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">100%</div>
-    </div></td>
+<td><strong>VISTA PARQUE CONDOMÍNIO CLUBE</strong></td>
+<td>VICTA</td>
+<td>77</td>
+<td>77</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>R$ 25.501.649</td>
+<td>R$ 25.251.718</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>JÓQUEI CONDOMÍNIO CLUBE</strong></td>
-  <td>VICTA</td>
-  <td>88</td>
-  <td>89</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">101%</span></td>
-  <td>R$ 31.442.273</td>
-  <td>R$ 32.059.384</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">101%</div>
-    </div></td>
+<td><strong>JÓQUEI CONDOMÍNIO CLUBE</strong></td>
+<td>VICTA</td>
+<td>88</td>
+<td>89</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">101%</span></td>
+<td>R$ 31.442.273</td>
+<td>R$ 32.059.384</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">101%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA ACÁCIA</strong></td>
-  <td>VICTA</td>
-  <td>88</td>
-  <td>267</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">303%</span></td>
-  <td>R$ 18.579.024</td>
-  <td>R$ 57.569.688</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">303%</div>
-    </div></td>
+<td><strong>VITÓRIA ACÁCIA</strong></td>
+<td>VICTA</td>
+<td>88</td>
+<td>267</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">303%</span></td>
+<td>R$ 18.579.024</td>
+<td>R$ 57.569.688</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">303%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA SENNA</strong></td>
-  <td>VICTA</td>
-  <td>113</td>
-  <td>250</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">221%</span></td>
-  <td>R$ 24.496.132</td>
-  <td>R$ 52.865.549</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">221%</div>
-    </div></td>
+<td><strong>VITÓRIA SENNA</strong></td>
+<td>VICTA</td>
+<td>113</td>
+<td>250</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">221%</span></td>
+<td>R$ 24.496.132</td>
+<td>R$ 52.865.549</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">221%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>ATLÂNTICO CONDOMINIO CLUBE</strong></td>
-  <td>VICTA</td>
-  <td>97</td>
-  <td>79</td>
-  <td><span style="color: #ffc107; font-weight: bold;">81%</span></td>
-  <td>R$ 33.986.948</td>
-  <td>R$ 29.047.998</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill warning" style="width: 81%;">81%</div>
-    </div></td>
+<td><strong>ATLÂNTICO CONDOMINIO CLUBE</strong></td>
+<td>VICTA</td>
+<td>97</td>
+<td>79</td>
+<td><span style="color: #ffc107; font-weight: bold;">81%</span></td>
+<td>R$ 33.986.948</td>
+<td>R$ 29.047.998</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill warning" style="width: 81%;">81%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VISTA COSTEIRA CUMBUCO</strong></td>
-  <td>VICTA</td>
-  <td>71</td>
-  <td>132</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">186%</span></td>
-  <td>R$ 22.741.450</td>
-  <td>R$ 44.448.127</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">186%</div>
-    </div></td>
+<td><strong>VISTA COSTEIRA CUMBUCO</strong></td>
+<td>VICTA</td>
+<td>71</td>
+<td>132</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">186%</span></td>
+<td>R$ 22.741.450</td>
+<td>R$ 44.448.127</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">186%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA EUSEBIO</strong></td>
-  <td>VICTA</td>
-  <td>70</td>
-  <td>121</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">173%</span></td>
-  <td>R$ 13.653.412</td>
-  <td>R$ 24.848.450</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">173%</div>
-    </div></td>
+<td><strong>VITÓRIA EUSEBIO</strong></td>
+<td>VICTA</td>
+<td>70</td>
+<td>121</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">173%</span></td>
+<td>R$ 13.653.412</td>
+<td>R$ 24.848.450</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">173%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA MARACANAÚ</strong></td>
-  <td>VICTA</td>
-  <td>19</td>
-  <td>54</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">284%</span></td>
-  <td>R$ 7.201.700</td>
-  <td>R$ 11.441.770</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">284%</div>
-    </div></td>
+<td><strong>VITÓRIA MARACANAÚ</strong></td>
+<td>VICTA</td>
+<td>19</td>
+<td>54</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">284%</span></td>
+<td>R$ 7.201.700</td>
+<td>R$ 11.441.770</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">284%</div>
+</div></td>
 </tr>
 <tr data-empresa="VICTA" style="display: none;">
-  <td><strong>VITÓRIA ÍRIS</strong></td>
-  <td>VICTA</td>
-  <td>104</td>
-  <td>18</td>
-  <td><span style="color: #6c757d; font-weight: bold;">17%</span></td>
-  <td>R$ 27.771.963</td>
-  <td>R$ 3.844.200</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill critical" style="width: 17%;">17%</div>
-    </div></td>
+<td><strong>VITÓRIA ÍRIS</strong></td>
+<td>VICTA</td>
+<td>104</td>
+<td>18</td>
+<td><span style="color: #6c757d; font-weight: bold;">17%</span></td>
+<td>R$ 27.771.963</td>
+<td>R$ 3.844.200</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 17%;">17%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>Q TOWER CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>37</td>
-  <td>28</td>
-  <td><span style="color: #6c757d; font-weight: bold;">76%</span></td>
-  <td>R$ 185.961.848</td>
-  <td>R$ 133.457.509</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill critical" style="width: 75%;">76%</div>
-    </div></td>
+<td><strong>Q TOWER CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>37</td>
+<td>28</td>
+<td><span style="color: #6c757d; font-weight: bold;">76%</span></td>
+<td>R$ 185.961.848</td>
+<td>R$ 133.457.509</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 75%;">76%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>OCEAN GARDEN CUMBUCO</strong></td>
-  <td>DIAGONAL</td>
-  <td>14</td>
-  <td>32</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">229%</span></td>
-  <td>R$ 18.749.614</td>
-  <td>R$ 44.475.645</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">229%</div>
-    </div></td>
+<td><strong>OCEAN GARDEN CUMBUCO</strong></td>
+<td>DIAGONAL</td>
+<td>14</td>
+<td>32</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">229%</span></td>
+<td>R$ 18.749.614</td>
+<td>R$ 44.475.645</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">229%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>OCEAN GARDEN</strong></td>
-  <td>DIAGONAL</td>
-  <td>9</td>
-  <td>12</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">133%</span></td>
-  <td>R$ 23.295.159</td>
-  <td>R$ 29.209.716</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">133%</div>
-    </div></td>
+<td><strong>OCEAN GARDEN</strong></td>
+<td>DIAGONAL</td>
+<td>9</td>
+<td>12</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">133%</span></td>
+<td>R$ 23.295.159</td>
+<td>R$ 29.209.716</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">133%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>IVENS MONUMENTAL</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>2</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
-  <td>R$ 17.180.293</td>
-  <td>R$ 33.615.810</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">200%</div>
-    </div></td>
+<td><strong>IVENS MONUMENTAL</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>2</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+<td>R$ 17.180.293</td>
+<td>R$ 33.615.810</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">200%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>DIAGONAL BY PININFARINA</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>2</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
-  <td>R$ 8.528.505</td>
-  <td>R$ 17.265.788</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">200%</div>
-    </div></td>
+<td><strong>DIAGONAL BY PININFARINA</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>2</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+<td>R$ 8.528.505</td>
+<td>R$ 17.265.788</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">200%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>CONNECT BEIRA MAR</strong></td>
-  <td>DIAGONAL</td>
-  <td>7</td>
-  <td>31</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">443%</span></td>
-  <td>R$ 3.647.099</td>
-  <td>R$ 15.005.333</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">443%</div>
-    </div></td>
+<td><strong>CONNECT BEIRA MAR</strong></td>
+<td>DIAGONAL</td>
+<td>7</td>
+<td>31</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">443%</span></td>
+<td>R$ 3.647.099</td>
+<td>R$ 15.005.333</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">443%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>EDGE CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>1</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>R$ 6.683.806</td>
-  <td>R$ 5.800.000</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">100%</div>
-    </div></td>
+<td><strong>EDGE CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>1</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>R$ 6.683.806</td>
+<td>R$ 5.800.000</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>ICON CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>0</td>
-  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
-  <td>R$ 4.110.288</td>
-  <td>R$ 0</td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>ICON CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>0</td>
+<td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+<td>R$ 4.110.288</td>
+<td>R$ 0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>LEGACY CONDOMINIUM</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>1</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>R$ 5.380.370</td>
-  <td>R$ 3.850.000</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">100%</div>
-    </div></td>
+<td><strong>LEGACY CONDOMINIUM</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>1</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>R$ 5.380.370</td>
+<td>R$ 3.850.000</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>AVULSO ROSSI</strong></td>
-  <td>DIAGONAL</td>
-  <td>0</td>
-  <td>7</td>
-  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
-  <td>R$ 0</td>
-  <td>R$ 1.290.000</td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">100%</div>
-    </div></td>
+<td><strong>AVULSO ROSSI</strong></td>
+<td>DIAGONAL</td>
+<td>0</td>
+<td>7</td>
+<td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+<td>R$ 0</td>
+<td>R$ 1.290.000</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div></td>
 </tr>
 <tr data-empresa="DIAGONAL">
-  <td><strong>AVULSO DIAGONAL</strong></td>
-  <td>DIAGONAL</td>
-  <td>1</td>
-  <td>0</td>
-  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
-  <td>R$ 550.000</td>
-  <td>R$ 0</td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>AVULSO DIAGONAL</strong></td>
+<td>DIAGONAL</td>
+<td>1</td>
+<td>0</td>
+<td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+<td>R$ 550.000</td>
+<td>R$ 0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr data-empresa="NAN" style="display: none;">
-  <td><strong>nan</strong></td>
-  <td>NAN</td>
-  <td>0</td>
-  <td>0</td>
-  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
-  <td>R$ 0</td>
-  <td>R$ 0</td>
-  <td>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
-        </div></td>
+<td><strong>nan</strong></td>
+<td>NAN</td>
+<td>0</td>
+<td>0</td>
+<td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+<td>R$ 0</td>
+<td>R$ 0</td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+</div></td>
 </tr>
 <tr class="total-row" data-empresa="VICTA" style="display: none;">
-  <td><strong>TOTAL VICTA</strong></td>
-  <td><strong>VICTA</strong></td>
-  <td><strong>918</strong></td>
-  <td><strong>1261</strong></td>
-  <td><strong><span style="color: #0a4d3a;">137%</span></strong></td>
-  <td><strong>R$ 256.896.860</strong></td>
-  <td><strong>R$ 339.180.657</strong></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">137%</div>
-    </div></td>
+<td><strong>TOTAL VICTA</strong></td>
+<td><strong>VICTA</strong></td>
+<td><strong>918</strong></td>
+<td><strong>1261</strong></td>
+<td><strong><span style="color: #0a4d3a;">137%</span></strong></td>
+<td><strong>R$ 256.896.860</strong></td>
+<td><strong>R$ 339.180.657</strong></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">137%</div>
+</div></td>
 </tr>
 <tr class="total-row" data-empresa="DIAGONAL">
-  <td><strong>TOTAL DIAGONAL</strong></td>
-  <td><strong>DIAGONAL</strong></td>
-  <td><strong>73</strong></td>
-  <td><strong>116</strong></td>
-  <td><strong><span style="color: #0a4d3a;">159%</span></strong></td>
-  <td><strong>R$ 274.086.984</strong></td>
-  <td><strong>R$ 283.969.800</strong></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">159%</div>
-    </div></td>
+<td><strong>TOTAL DIAGONAL</strong></td>
+<td><strong>DIAGONAL</strong></td>
+<td><strong>73</strong></td>
+<td><strong>116</strong></td>
+<td><strong><span style="color: #0a4d3a;">159%</span></strong></td>
+<td><strong>R$ 274.086.984</strong></td>
+<td><strong>R$ 283.969.800</strong></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">159%</div>
+</div></td>
 </tr>
 <tr class="total-row" data-empresa="AMBAS" style="display: none;">
-  <td><strong>TOTAL GERAL</strong></td>
-  <td><strong>AMBAS</strong></td>
-  <td><strong>991</strong></td>
-  <td><strong>1377</strong></td>
-  <td><strong><span style="color: #0a4d3a;">139%</span></strong></td>
-  <td><strong>R$ 530.983.843</strong></td>
-  <td><strong>R$ 623.150.457</strong></td>
-  <td>
-    <div class="progress-bar">
-        <div class="progress-fill success" style="width: 100%;">139%</div>
-    </div></td>
+<td><strong>TOTAL GERAL</strong></td>
+<td><strong>AMBAS</strong></td>
+<td><strong>991</strong></td>
+<td><strong>1377</strong></td>
+<td><strong><span style="color: #0a4d3a;">139%</span></strong></td>
+<td><strong>R$ 530.983.843</strong></td>
+<td><strong>R$ 623.150.457</strong></td>
+<td>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">139%</div>
+</div></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
 </div>
 <div style="margin-top: 30px;">
@@ -1445,9 +1500,9 @@
                     🏢 Filtrar por Empresa
                 </div>
 <div class="filter-buttons">
-<button class="filter-btn active" onclick="filterData(&#39;ALL&#39;, &#39;insights&#39;);setVSO(&#39;ALL&#39;);" style="transform: translateY(-2px);">📊 VICTA/DIAGONAL</button>
-<button class="filter-btn" onclick="filterData(&#39;VICTA&#39;, &#39;insights&#39;);setVSO(&#39;VICTA&#39;);" style="transform: translateY(0px);">🏙️ VICTA</button>
-<button class="filter-btn" onclick="filterData(&#39;DIAGONAL&#39;, &#39;insights&#39;);setVSO(&#39;DIAGONAL&#39;);">🏗️ DIAGONAL</button>
+<button class="filter-btn active" onclick="filterData('ALL', 'insights');setVSO('ALL');" style="transform: translateY(-2px);">📊 VICTA/DIAGONAL</button>
+<button class="filter-btn" onclick="filterData('VICTA', 'insights');setVSO('VICTA');" style="transform: translateY(0px);">🏙️ VICTA</button>
+<button class="filter-btn" onclick="filterData('DIAGONAL', 'insights');setVSO('DIAGONAL');">🏗️ DIAGONAL</button>
 </div>
 </div>
 <div class="section">
@@ -1457,7 +1512,7 @@
 <div class="section-content">
 <div class="insight-card">
 <div class="insight-title">🔥 Performance em Agosto</div>
-<p>A empresa superou a meta mensal em <strong>8%</strong></div>
+<p>A empresa superou a meta mensal em <strong>8%</strong></p></div>
 <div class="insight-card">
 <div class="insight-title">⚠️ Concentração de Riscos</div>
 <p><strong>Vitória Íris</strong> Necessidade de foco para recuperar o gap decorrente do reagendamento do lançamento, que passou de abril para agosto.</p>
@@ -2068,7 +2123,6 @@ function _applyEmpresaData(tabId, key) {
   document.addEventListener('DOMContentLoaded', function() { _applyEmpresaData('consolidacao', 'ALL'); });
 })();
 </script>
-
 <script>
 (function () {
   function reorderVSO() {
