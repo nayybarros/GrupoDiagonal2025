@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///C:/Users/nayarabarros/Downloads/INFORMACAO_GRUPO_DIAGONAL_V12_PRONTO.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Análise Executiva Corporativa - Agosto 2025</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a4d3a 0%, #1a5f4a 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #0a4d3a, #1a5f4a);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102,255,170,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-20px, -20px); }
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-tabs {
+            background: #f8f9fa;
+            border-bottom: 3px solid #1a5f4a;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            background: #f8f9fa;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            background: #e9ecef;
+            color: #1a5f4a;
+        }
+
+        .nav-tab.active {
+            background: #1a5f4a;
+            color: white;
+            border-bottom-color: #66ffaa;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 40px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .summary-card.success { border-left-color: #0a4d3a; }
+        .summary-card.warning { border-left-color: #66ffaa; }
+        .summary-card.info { border-left-color: #1a5f4a; }
+        .summary-card.critical { border-left-color: #dc3545; }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #343a40;
+        }
+
+        .card-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card-subtitle {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-header {
+            background: linear-gradient(45deg, #0a4d3a, #1a5f4a);
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .section-content {
+            padding: 30px;
+        }
+
+        .quarterly-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .quarterly-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border-top: 4px solid #1a5f4a;
+            transition: transform 0.3s ease;
+        }
+
+        .quarterly-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .quarterly-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1a5f4a;
+            margin-bottom: 10px;
+        }
+
+        .quarterly-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0a4d3a;
+            margin-bottom: 5px;
+        }
+
+        .quarterly-subtitle {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .progress-fill.success { background: linear-gradient(90deg, #0a4d3a, #1a5f4a); }
+        .progress-fill.warning { background: linear-gradient(90deg, #ffc107, #ff8c00); }
+        .progress-fill.critical { background: linear-gradient(90deg, #dc3545, #c82333); }
+
+        .insight-card {
+            background: linear-gradient(135deg, rgba(10,77,58,0.1), rgba(102,255,170,0.1));
+            border: 1px solid #66ffaa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .insight-title {
+            color: #0a4d3a;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .metric-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .metric-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #1a5f4a;
+        }
+
+        .footer {
+            background: linear-gradient(45deg, #0a4d3a, #1a5f4a);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .status-badge.positivo {
+            background: #66ffaa;
+            color: #0a4d3a;
+        }
+
+        .status-badge.critico {
+            background: #ffc107;
+            color: #0a4d3a;
+        }
+
+        .status-badge.urgente {
+            background: #dc3545;
+            color: white;
+        }
+
+        .empreendimento-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .empreendimento-table th {
+            background: linear-gradient(135deg, #0a4d3a, #1a5f4a);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .empreendimento-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .empreendimento-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .empreendimento-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .empreendimento-table .total-row {
+            background: linear-gradient(135deg, rgba(10,77,58,0.1), rgba(102,255,170,0.1));
+            font-weight: bold;
+        }
+
+        .filter-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 2px solid #e9ecef;
+        }
+
+        .filter-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0a4d3a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #fff;
+            border: 2px solid #1a5f4a;
+            color: #1a5f4a;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn:hover {
+            background: #1a5f4a;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 95, 74, 0.3);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0a4d3a, #1a5f4a);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 95, 74, 0.4);
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .filter-btn:hover::before {
+            left: 100%;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .tab-content { padding: 20px; }
+            .nav-tabs { flex-wrap: wrap; }
+            .quarterly-grid { grid-template-columns: 1fr; }
+            .metric-comparison { grid-template-columns: 1fr; }
+            .empreendimento-table { font-size: 0.8rem; }
+            .empreendimento-table th,
+            .empreendimento-table td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>📊 Análise GRUPO DIAGONAL</h1>
+<p>Performance ATÉ AGOSTO 2025 • Consolidação de Dados • Atualização: 03/09/2025</p>
+</div>
+<div class="nav-tabs">
+<button class="nav-tab active" onclick="showTab(&#39;consolidacao&#39;)">🎯 Consolidação</button>
+<button class="nav-tab" onclick="showTab(&#39;tabela-metas&#39;)">📋 Meta x Realizado</button>
+<button class="nav-tab" onclick="showTab(&#39;insights&#39;)">💡 Insights</button>
+</div>
+<!-- TAB 1: CONSOLIDAÇÃO -->
+<div class="tab-content active" id="consolidacao">
+<div class="filter-container">
+<div class="filter-title">
+                    🏢 Filtrar por Empresa
+                </div>
+<div class="filter-buttons">
+<button class="filter-btn active" onclick="filterData(&#39;ALL&#39;, &#39;consolidacao&#39;);setVSO(&#39;ALL&#39;);" style="transform: translateY(-2px);">📊 VICTA/DIAGONAL</button>
+<button class="filter-btn" onclick="filterData(&#39;VICTA&#39;, &#39;consolidacao&#39;);setVSO(&#39;VICTA&#39;);" style="transform: translateY(0px);">🏙️ VICTA</button>
+<button class="filter-btn" onclick="filterData(&#39;DIAGONAL&#39;, &#39;consolidacao&#39;);setVSO(&#39;DIAGONAL&#39;);" style="transform: translateY(-2px);">🏗️ DIAGONAL</button>
+</div>
+</div>
+<div class="summary-grid">
+<div class="summary-card success" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="card-title">VGV Consolidado (Maior Base)</div>
+<div class="card-value" style="color: #0a4d3a;">R$ 623,2M</div>
+<div class="card-subtitle">1377 unidades vendidas</div>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;">100%</div>
+</div>
+</div>
+<div class="summary-card info" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="card-title">Estoque Total Consolidado</div>
+<div class="card-value" style="color: #1a5f4a;">2303</div>
+<div class="card-subtitle"></div>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 63%;">62,7%</div>
+</div>
+</div>
+<div class="summary-card critical" style="opacity: 1; transform: translateY(-5px) scale(1.02); transition: 0.6s;">
+<div class="card-title">Situações Críticas</div>
+<div class="card-value" style="color: #dc3545;">4</div>
+<div class="card-subtitle">Empreendimentos em alerta</div>
+<div class="progress-bar">
+<div class="progress-fill critical" style="width: 100%;">ATENÇÃO</div>
+</div>
+</div>
+<div class="summary-card info" id="card-estoque-vgv" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="card-title">Estoque VGV</div>
+<div class="card-value" style="color: #1a5f4a;">R$ 1,19Bi</div>
+<div class="card-subtitle">VGV disponível grupo</div>
+<div class="progress-bar">
+<div class="progress-fill success" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section-header">
+                    📈 Performance Agosto 2025 - Análise Detalhada
+                </div>
+<div class="section-content">
+<div class="quarterly-grid">
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="quarterly-title">Meta Agosto</div>
+<div class="quarterly-value">150</div>
+<div class="quarterly-subtitle">Unidades previstas</div>
+</div>
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="quarterly-title">Realizado Agosto</div>
+<div class="quarterly-value">168</div>
+<div class="quarterly-subtitle">Unidades vendidas</div>
+</div>
+</div>
+<div class="quarterly-grid" id="vso-cards" style="margin-top: 10px;">
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+  <div class="quarterly-title">VSO (3TRI)</div>
+  <div class="quarterly-value" id="vso-3tri">13,47%</div>
+  <div class="quarterly-subtitle">3º trimestre</div>
+</div>
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+  <div class="quarterly-title">VSO (4TRI)</div>
+  <div class="quarterly-value" id="vso-4tri">0,00%</div>
+  <div class="quarterly-subtitle">4º trimestre</div>
+</div>
+
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="quarterly-title">VSO (Mês)</div>
+<div class="quarterly-value" id="vso-mes">6,63%</div>
+<div class="quarterly-subtitle">Velocidade mensal de vendas</div>
+</div>
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="quarterly-title">VSO (Ano)</div>
+<div class="quarterly-value" id="vso-ano">53,97%</div>
+<div class="quarterly-subtitle">Velocidade acumulada</div>
+</div>
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="quarterly-title">VSO (1TRI)</div>
+<div class="quarterly-value" id="vso-1tri">17,20%</div>
+<div class="quarterly-subtitle">1º trimestre</div>
+</div>
+<div class="quarterly-card" style="opacity: 1; transform: translateY(0px) scale(1); transition: 0.6s;">
+<div class="quarterly-title">VSO (2TRI)</div>
+<div class="quarterly-value" id="vso-2tri">23,01%</div>
+<div class="quarterly-subtitle">2º trimestre</div>
+</div>
+</div>
+<div class="insight-card">
+<div class="insight-title">🎯 Destaque de Performance</div>
+<p>O mês de Agosto apresentou excelente performance com <strong>108% de atingimento da meta</strong></div>
+</div>
+</div>
+</div>
+<!-- TAB 2: TABELA META x REALIZADO -->
+<div class="tab-content" id="tabela-metas">
+<div class="filter-container">
+<div class="filter-title">
+                    🏢 Filtrar por Empresa
+                </div>
+<div class="filter-buttons">
+<button class="filter-btn" onclick="filterTable(&#39;ALL&#39;)">📊 VICTA/DIAGONAL</button>
+<button class="filter-btn" onclick="filterTable(&#39;VICTA&#39;)">🏙️ VICTA</button>
+<button class="filter-btn active" onclick="filterTable(&#39;DIAGONAL&#39;)" style="transform: translateY(-2px);">🏗️ DIAGONAL</button>
+</div>
+</div>
+<div class="section">
+<div class="section-header">
+                    📋 Performance por Empreendimento - Agosto 2025
+                </div>
+<div class="section-content">
+<table class="empreendimento-table">
+<thead>
+<tr>
+<th>Empreendimento</th>
+<th>Empresa</th>
+<th>Meta Qtd</th>
+<th>Realizado Qtd</th>
+<th>% Atingimento</th>
+<th>VSO (Mês)</th>
+<th>Previsto Mês VGV</th>
+<th>VGV Realizado</th>
+<th>Status</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Alta Vista Passare</strong></td>
+  <td>VICTA</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Mirante Condominio Clube</strong></td>
+  <td>VICTA</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Belvedere Condomínio Clube</strong></td>
+  <td>VICTA</td>
+  <td>10</td>
+  <td>8</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">80%</span></td>
+  <td>0.13</td>
+  <td>R$ 3.278.388</td>
+  <td>R$ 2.790.649</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 80%;">80%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Vitória Caucaia</strong></td>
+  <td>VICTA</td>
+  <td>0</td>
+  <td>2</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>0.66</td>
+  <td>R$ 0</td>
+  <td>R$ 404.797</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">EXTRA</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Vista Mar Condomínio Clube</strong></td>
+  <td>VICTA</td>
+  <td>9</td>
+  <td>3</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">33%</span></td>
+  <td>0.11</td>
+  <td>R$ 3.200.992</td>
+  <td>R$ 1.144.042</td>
+  <td><span class="status-badge critico">ABAIXO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill critical" style="width: 33%;">33%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Vitória Mondubim</strong></td>
+  <td>VICTA</td>
+  <td>0</td>
+  <td>1</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 220.004</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">EXTRA</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VISTA PARQUE CONDOMÍNIO CLUBE</strong></td>
+  <td>VICTA</td>
+  <td>10</td>
+  <td>9</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">90%</span></td>
+  <td>0.06</td>
+  <td>R$ 3.317.538</td>
+  <td>R$ 2.937.661</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 90%;">90%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>JÓQUEI CONDOMÍNIO CLUBE</strong></td>
+  <td>VICTA</td>
+  <td>11</td>
+  <td>10</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">91%</span></td>
+  <td>0.05</td>
+  <td>R$ 3.937.164</td>
+  <td>R$ 3.617.531</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 90%;">91%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA ACÁCIA</strong></td>
+  <td>VICTA</td>
+  <td>11</td>
+  <td>7</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">64%</span></td>
+  <td>0.27</td>
+  <td>R$ 2.397.018</td>
+  <td>R$ 1.518.870</td>
+  <td><span class="status-badge critico">ABAIXO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill critical" style="width: 63%;">64%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA SENNA</strong></td>
+  <td>VICTA</td>
+  <td>11</td>
+  <td>3</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">27%</span></td>
+  <td>1.51</td>
+  <td>R$ 2.316.341</td>
+  <td>R$ 652.000</td>
+  <td><span class="status-badge critico">ABAIXO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill critical" style="width: 27%;">27%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>ATLÂNTICO CONDOMINIO CLUBE</strong></td>
+  <td>VICTA</td>
+  <td>13</td>
+  <td>13</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>0.05</td>
+  <td>R$ 4.561.386</td>
+  <td>R$ 4.916.436</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">100%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VISTA COSTEIRA CUMBUCO</strong></td>
+  <td>VICTA</td>
+  <td>11</td>
+  <td>28</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">255%</span></td>
+  <td>0.00</td>
+  <td>R$ 3.527.045</td>
+  <td>R$ 9.957.787</td>
+  <td><span class="status-badge positivo">EXCELENTE</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">255%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA EUSEBIO</strong></td>
+  <td>VICTA</td>
+  <td>16</td>
+  <td>32</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+  <td>0.00</td>
+  <td>R$ 3.121.560</td>
+  <td>R$ 6.431.897</td>
+  <td><span class="status-badge positivo">EXCELENTE</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">200%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA MARACANAÚ</strong></td>
+  <td>VICTA</td>
+  <td>17</td>
+  <td>16</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">94%</span></td>
+  <td>0.00</td>
+  <td>R$ 3.401.700</td>
+  <td>R$ 3.330.666</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 94%;">94%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA ÍRIS</strong></td>
+  <td>VICTA</td>
+  <td>22</td>
+  <td>18</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">82%</span></td>
+  <td>0.00</td>
+  <td>R$ 4.854.538</td>
+  <td>R$ 3.844.200</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 81%;">82%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>Q TOWER CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>4</td>
+  <td>2</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">50%</span></td>
+  <td>0.02</td>
+  <td>R$ 20.103.984</td>
+  <td>R$ 19.503.457</td>
+  <td><span class="status-badge critico">ABAIXO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill critical" style="width: 50%;">50%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>OCEAN GARDEN CUMBUCO</strong></td>
+  <td>DIAGONAL</td>
+  <td>2</td>
+  <td>4</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+  <td>0.07</td>
+  <td>R$ 2.678.516</td>
+  <td>R$ 10.552.182</td>
+  <td><span class="status-badge positivo">EXCELENTE</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">200%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>OCEAN GARDEN</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>2</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+  <td>0.16</td>
+  <td>R$ 2.588.351</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge positivo">EXCELENTE</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">200%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>IVENS MONUMENTAL</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>DIAGONAL BY PININFARINA</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>1</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>0.14</td>
+  <td>R$ 0</td>
+  <td>R$ 8.765.788</td>
+  <td><span class="status-badge positivo">BOM</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">EXTRA</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>CONNECT BEIRA MAR</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>9</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">900%</span></td>
+  <td>0.81</td>
+  <td>R$ 521.014</td>
+  <td>R$ 4.390.000</td>
+  <td><span class="status-badge positivo">EXCELENTE</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">900%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>EDGE CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">nan%</span></td>
+  <td>0.00</td>
+  <td>R$ 6.683.806</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>ICON CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>LEGACY CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>AVULSO ROSSI</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>AVULSO DIAGONAL</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>0.00</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="NAN" style="display: none;">
+  <td><strong>nan</strong></td>
+  <td>NAN</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">0%</span></td>
+  <td>nan</td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td><span class="status-badge">SEM META</span></td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr class="total-row" data-empresa="VICTA" style="display: none;">
+  <td><strong>TOTAL VICTA</strong></td>
+  <td><strong>VICTA</strong></td>
+  <td><strong>141</strong></td>
+  <td><strong>150</strong></td>
+  <td><strong><span style="color: #0a4d3a;">106%</span></strong></td>
+  <td>-</td>
+  <td><strong>R$ 37.913.671</strong></td>
+  <td><strong>R$ 41.766.540</strong></td>
+  <td><span class="status-badge positivo">SUCESSO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">106%</div>
+    </div></td>
+</tr>
+<tr class="total-row" data-empresa="DIAGONAL">
+  <td><strong>TOTAL DIAGONAL</strong></td>
+  <td><strong>DIAGONAL</strong></td>
+  <td><strong>9</strong></td>
+  <td><strong>18</strong></td>
+  <td><strong><span style="color: #0a4d3a;">200%</span></strong></td>
+  <td>-</td>
+  <td><strong>R$ 32.575.671</strong></td>
+  <td><strong>R$ 34.087.777</strong></td>
+  <td><span class="status-badge positivo">SUCESSO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">200%</div>
+    </div></td>
+</tr>
+<tr class="total-row" data-empresa="AMBAS" style="display: none;">
+  <td><strong>TOTAL GERAL</strong></td>
+  <td><strong>AMBAS</strong></td>
+  <td><strong>150</strong></td>
+  <td><strong>168</strong></td>
+  <td><strong><span style="color: #0a4d3a;">112%</span></strong></td>
+  <td>-</td>
+  <td><strong>R$ 70.489.342</strong></td>
+  <td><strong>R$ 75.854.317</strong></td>
+  <td><span class="status-badge positivo">SUCESSO</span></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">112%</div>
+    </div></td>
+</tr>
+</tbody>
+</table>
+<div class="section" style="margin-top: 40px;">
+<div class="section-header">
+                            📈 Performance Anual Consolidada - Até Agosto 2025
+                        </div>
+<div class="section-content">
+<table class="empreendimento-table">
+<thead>
+<tr>
+<th>Empreendimento</th>
+<th>Empresa</th>
+<th>Previsto Ano Qtd (Até Agosto)</th>
+<th>Real Ano Qtd</th>
+<th>% Atingimento Anual</th>
+<th>Previsto Ano VGV (Até Agosto)</th>
+<th>Real Ano VGV</th>
+<th>Performance Anual</th>
+</tr>
+</thead>
+<tbody>
+
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Alta Vista Passare</strong></td>
+  <td>VICTA</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Mirante Condominio Clube</strong></td>
+  <td>VICTA</td>
+  <td>1</td>
+  <td>3</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">300%</span></td>
+  <td>R$ 354.999</td>
+  <td>R$ 1.064.997</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">300%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Belvedere Condomínio Clube</strong></td>
+  <td>VICTA</td>
+  <td>77</td>
+  <td>92</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">119%</span></td>
+  <td>R$ 25.200.702</td>
+  <td>R$ 31.117.367</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">119%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Vitória Caucaia</strong></td>
+  <td>VICTA</td>
+  <td>2</td>
+  <td>10</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">500%</span></td>
+  <td>R$ 403.417</td>
+  <td>R$ 2.050.391</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">500%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Vista Mar Condomínio Clube</strong></td>
+  <td>VICTA</td>
+  <td>72</td>
+  <td>63</td>
+  <td><span style="color: #ffc107; font-weight: bold;">88%</span></td>
+  <td>R$ 25.563.189</td>
+  <td>R$ 22.238.827</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 87%;">88%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>Vitória Mondubim</strong></td>
+  <td>VICTA</td>
+  <td>0</td>
+  <td>6</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>R$ 0</td>
+  <td>R$ 1.332.192</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">100%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VISTA PARQUE CONDOMÍNIO CLUBE</strong></td>
+  <td>VICTA</td>
+  <td>77</td>
+  <td>77</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>R$ 25.501.649</td>
+  <td>R$ 25.251.718</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">100%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>JÓQUEI CONDOMÍNIO CLUBE</strong></td>
+  <td>VICTA</td>
+  <td>88</td>
+  <td>89</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">101%</span></td>
+  <td>R$ 31.442.273</td>
+  <td>R$ 32.059.384</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">101%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA ACÁCIA</strong></td>
+  <td>VICTA</td>
+  <td>88</td>
+  <td>267</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">303%</span></td>
+  <td>R$ 18.579.024</td>
+  <td>R$ 57.569.688</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">303%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA SENNA</strong></td>
+  <td>VICTA</td>
+  <td>113</td>
+  <td>250</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">221%</span></td>
+  <td>R$ 24.496.132</td>
+  <td>R$ 52.865.549</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">221%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>ATLÂNTICO CONDOMINIO CLUBE</strong></td>
+  <td>VICTA</td>
+  <td>97</td>
+  <td>79</td>
+  <td><span style="color: #ffc107; font-weight: bold;">81%</span></td>
+  <td>R$ 33.986.948</td>
+  <td>R$ 29.047.998</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill warning" style="width: 81%;">81%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VISTA COSTEIRA CUMBUCO</strong></td>
+  <td>VICTA</td>
+  <td>71</td>
+  <td>132</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">186%</span></td>
+  <td>R$ 22.741.450</td>
+  <td>R$ 44.448.127</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">186%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA EUSEBIO</strong></td>
+  <td>VICTA</td>
+  <td>70</td>
+  <td>121</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">173%</span></td>
+  <td>R$ 13.653.412</td>
+  <td>R$ 24.848.450</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">173%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA MARACANAÚ</strong></td>
+  <td>VICTA</td>
+  <td>19</td>
+  <td>54</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">284%</span></td>
+  <td>R$ 7.201.700</td>
+  <td>R$ 11.441.770</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">284%</div>
+    </div></td>
+</tr>
+<tr data-empresa="VICTA" style="display: none;">
+  <td><strong>VITÓRIA ÍRIS</strong></td>
+  <td>VICTA</td>
+  <td>104</td>
+  <td>18</td>
+  <td><span style="color: #6c757d; font-weight: bold;">17%</span></td>
+  <td>R$ 27.771.963</td>
+  <td>R$ 3.844.200</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill critical" style="width: 17%;">17%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>Q TOWER CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>37</td>
+  <td>28</td>
+  <td><span style="color: #6c757d; font-weight: bold;">76%</span></td>
+  <td>R$ 185.961.848</td>
+  <td>R$ 133.457.509</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill critical" style="width: 75%;">76%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>OCEAN GARDEN CUMBUCO</strong></td>
+  <td>DIAGONAL</td>
+  <td>14</td>
+  <td>32</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">229%</span></td>
+  <td>R$ 18.749.614</td>
+  <td>R$ 44.475.645</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">229%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>OCEAN GARDEN</strong></td>
+  <td>DIAGONAL</td>
+  <td>9</td>
+  <td>12</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">133%</span></td>
+  <td>R$ 23.295.159</td>
+  <td>R$ 29.209.716</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">133%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>IVENS MONUMENTAL</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>2</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+  <td>R$ 17.180.293</td>
+  <td>R$ 33.615.810</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">200%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>DIAGONAL BY PININFARINA</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>2</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">200%</span></td>
+  <td>R$ 8.528.505</td>
+  <td>R$ 17.265.788</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">200%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>CONNECT BEIRA MAR</strong></td>
+  <td>DIAGONAL</td>
+  <td>7</td>
+  <td>31</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">443%</span></td>
+  <td>R$ 3.647.099</td>
+  <td>R$ 15.005.333</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">443%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>EDGE CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>1</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>R$ 6.683.806</td>
+  <td>R$ 5.800.000</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">100%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>ICON CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>0</td>
+  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+  <td>R$ 4.110.288</td>
+  <td>R$ 0</td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>LEGACY CONDOMINIUM</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>1</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>R$ 5.380.370</td>
+  <td>R$ 3.850.000</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">100%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>AVULSO ROSSI</strong></td>
+  <td>DIAGONAL</td>
+  <td>0</td>
+  <td>7</td>
+  <td><span style="color: #0a4d3a; font-weight: bold;">100%</span></td>
+  <td>R$ 0</td>
+  <td>R$ 1.290.000</td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">100%</div>
+    </div></td>
+</tr>
+<tr data-empresa="DIAGONAL">
+  <td><strong>AVULSO DIAGONAL</strong></td>
+  <td>DIAGONAL</td>
+  <td>1</td>
+  <td>0</td>
+  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+  <td>R$ 550.000</td>
+  <td>R$ 0</td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr data-empresa="NAN" style="display: none;">
+  <td><strong>nan</strong></td>
+  <td>NAN</td>
+  <td>0</td>
+  <td>0</td>
+  <td><span style="color: #6c757d; font-weight: bold;">0%</span></td>
+  <td>R$ 0</td>
+  <td>R$ 0</td>
+  <td>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%; background: #6c757d;">SEM META</div>
+        </div></td>
+</tr>
+<tr class="total-row" data-empresa="VICTA" style="display: none;">
+  <td><strong>TOTAL VICTA</strong></td>
+  <td><strong>VICTA</strong></td>
+  <td><strong>918</strong></td>
+  <td><strong>1261</strong></td>
+  <td><strong><span style="color: #0a4d3a;">137%</span></strong></td>
+  <td><strong>R$ 256.896.860</strong></td>
+  <td><strong>R$ 339.180.657</strong></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">137%</div>
+    </div></td>
+</tr>
+<tr class="total-row" data-empresa="DIAGONAL">
+  <td><strong>TOTAL DIAGONAL</strong></td>
+  <td><strong>DIAGONAL</strong></td>
+  <td><strong>73</strong></td>
+  <td><strong>116</strong></td>
+  <td><strong><span style="color: #0a4d3a;">159%</span></strong></td>
+  <td><strong>R$ 274.086.984</strong></td>
+  <td><strong>R$ 283.969.800</strong></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">159%</div>
+    </div></td>
+</tr>
+<tr class="total-row" data-empresa="AMBAS" style="display: none;">
+  <td><strong>TOTAL GERAL</strong></td>
+  <td><strong>AMBAS</strong></td>
+  <td><strong>991</strong></td>
+  <td><strong>1377</strong></td>
+  <td><strong><span style="color: #0a4d3a;">139%</span></strong></td>
+  <td><strong>R$ 530.983.843</strong></td>
+  <td><strong>R$ 623.150.457</strong></td>
+  <td>
+    <div class="progress-bar">
+        <div class="progress-fill success" style="width: 100%;">139%</div>
+    </div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="margin-top: 30px;">
+<div class="quarterly-grid" id="performance-analysis"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3: INSIGHTS -->
+<div class="tab-content" id="insights">
+<div class="filter-container">
+<div class="filter-title">
+                    🏢 Filtrar por Empresa
+                </div>
+<div class="filter-buttons">
+<button class="filter-btn active" onclick="filterData(&#39;ALL&#39;, &#39;insights&#39;);setVSO(&#39;ALL&#39;);" style="transform: translateY(-2px);">📊 VICTA/DIAGONAL</button>
+<button class="filter-btn" onclick="filterData(&#39;VICTA&#39;, &#39;insights&#39;);setVSO(&#39;VICTA&#39;);" style="transform: translateY(0px);">🏙️ VICTA</button>
+<button class="filter-btn" onclick="filterData(&#39;DIAGONAL&#39;, &#39;insights&#39;);setVSO(&#39;DIAGONAL&#39;);">🏗️ DIAGONAL</button>
+</div>
+</div>
+<div class="section">
+<div class="section-header">
+                    💡 Insights Estratégicos da Análise
+                </div>
+<div class="section-content">
+<div class="insight-card">
+<div class="insight-title">🔥 Performance em Agosto</div>
+<p>A empresa superou a meta mensal em <strong>8%</strong></div>
+<div class="insight-card">
+<div class="insight-title">⚠️ Concentração de Riscos</div>
+<p><strong>Vitória Íris</strong> Necessidade de foco para recuperar o gap decorrente do reagendamento do lançamento, que passou de abril para agosto.</p>
+</div>
+<div class="insight-card">
+<div class="insight-title">🎯 VSO Performance Consolidado</div>
+<p>VSO Mensal do Grupo em 6,62%.</p>
+</div>
+<div class="quarterly-grid"></div>
+</div>
+</div>
+</div>
+<div class="footer">
+</div>
+</div>
+<script>
+        // Dados atualizados do CSV
+        const empresaData = {
+            ALL: {
+                vgv: "R$ 547M",
+                estoque: "1.932",
+                vendidas: "1.212", 
+                situacoesCriticas: "3",
+                metaJulho: "153",
+                realizadoJulho: "184",
+                performance: "120%",
+                vgvJulho: "R$ 78,4M"
+            },
+            VICTA: {
+                vgv: "R$ 298M",
+                estoque: "1.746",
+                vendidas: "1.114",
+                situacoesCriticas: "2",
+                metaJulho: "147", 
+                realizadoJulho: "166",
+                performance: "113%",
+                vgvJulho: "R$ 46,1M"
+            },
+            DIAGONAL: {
+                vgv: "R$ 249M",
+                estoque: "186",
+                vendidas: "98",
+                situacoesCriticas: "1",
+                metaJulho: "6",
+                realizadoJulho: "18",
+                performance: "300%",
+                vgvJulho: "R$ 32,3M"
+            }
+        };
+
+        function filterTable(empresa) {
+            // Atualizar botões ativos na tabela
+            const tabContainer = document.getElementById('tabela-metas');
+            const buttons = tabContainer.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Mostrar/ocultar linhas baseado na empresa em AMBAS as tabelas
+            const allRows = document.querySelectorAll('[data-empresa]');
+            const totalRows = document.querySelectorAll('.total-row');
+            
+            allRows.forEach(row => {
+                const rowEmpresa = row.getAttribute('data-empresa');
+                if (empresa === 'ALL') {
+                    row.style.display = '';
+                } else {
+                    if (rowEmpresa === empresa) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+
+            // Controlar exibição das linhas de total em ambas as tabelas
+            if (empresa === 'ALL') {
+                totalRows.forEach(row => row.style.display = '');
+            } else {
+                totalRows.forEach(row => {
+                    const rowEmpresa = row.getAttribute('data-empresa');
+                    if (rowEmpresa === empresa || !rowEmpresa) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+
+            // Atualizar análise de performance
+            updatePerformanceAnalysis(empresa);
+            
+            // Animar mudanças
+            animateElements();
+        }
+
+        function updatePerformanceAnalysis(empresa) {
+            const analysisContainer = document.getElementById('performance-analysis');
+            const cards = analysisContainer.querySelectorAll('.quarterly-card');
+            
+            const performanceData = {
+                ALL: {
+                    acima110: { count: 8, vgv: "R$ 62,3M", unidades: "134" },
+                    entre80110: { count: 3, vgv: "R$ 10,6M", unidades: "36" },
+                    abaixo80: { count: 1, desc: "Vista Mar: 78%", unidades: "7" },
+                    total: { performance: "120%", extra: "+31", desc: "Acima da meta" }
+                },
+                VICTA: {
+                    acima110: { count: 6, vgv: "R$ 42,8M", unidades: "125" },
+                    entre80110: { count: 3, vgv: "R$ 10,6M", unidades: "36" },
+                    abaixo80: { count: 1, desc: "Vista Mar: 78%", unidades: "7" },
+                    total: { performance: "113%", extra: "+19", desc: "Acima da meta" }
+                },
+                DIAGONAL: {
+                    acima110: { count: 2, vgv: "R$ 29,5M", unidades: "12" },
+                    entre80110: { count: 0, vgv: "R$ 0", unidades: "0" },
+                    abaixo80: { count: 0, desc: "Nenhum", unidades: "0" },
+                    total: { performance: "300%", extra: "+12", desc: "Excepcional" }
+                }
+            };
+
+            const data = performanceData[empresa];
+            if (data) {
+                cards[0].querySelector('.quarterly-value').textContent = data.acima110.count;
+                cards[0].querySelectorAll('div')[3].innerHTML = `<div>${data.acima110.vgv}</div><div>${data.acima110.unidades} unidades</div>`;
+                
+                cards[1].querySelector('.quarterly-value').textContent = data.entre80110.count;
+                cards[1].querySelectorAll('div')[3].innerHTML = `<div>${data.entre80110.vgv}</div><div>${data.entre80110.unidades} unidades</div>`;
+                
+                cards[2].querySelector('.quarterly-value').textContent = data.abaixo80.count;
+                cards[2].querySelectorAll('div')[3].innerHTML = `<div>${data.abaixo80.desc}</div><div>${data.abaixo80.unidades} unidades</div>`;
+                
+                cards[3].querySelector('.quarterly-value').textContent = data.total.performance;
+                cards[3].querySelectorAll('div')[3].innerHTML = `<div>${data.total.extra} unidades</div><div>${data.total.desc}</div>`;
+            }
+        }
+
+        function filterData(empresa, tab) {
+            // Atualizar botões ativos
+            const tabContainer = document.getElementById(tab);
+            const buttons = tabContainer.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const data = empresaData[empresa];
+            
+            // Atualizar cards do resumo se existirem
+            const summaryCards = tabContainer.querySelectorAll('.summary-card');
+            if (summaryCards.length > 0) {
+                summaryCards[0].querySelector('.card-value').textContent = data.vgv;
+                summaryCards[1].querySelector('.card-value').textContent = data.estoque;
+                summaryCards[2].querySelector('.card-value').textContent = data.situacoesCriticas;
+                
+                summaryCards[0].querySelector('.card-subtitle').textContent = data.vendidas + ' unidades vendidas';
+            }
+
+            // Atualizar cards trimestrais
+            const quarterlyCards = tabContainer.querySelectorAll('.quarterly-card');
+            if (quarterlyCards.length >= 4) {
+                quarterlyCards[0].querySelector('.quarterly-value').textContent = data.metaJulho;
+                quarterlyCards[1].querySelector('.quarterly-value').textContent = data.realizadoJulho;
+                quarterlyCards[2].querySelector('.quarterly-value').textContent = data.performance;
+                quarterlyCards[3].querySelector('.quarterly-value').textContent = data.vgvJulho;
+            }
+
+            // Atualizar insights baseados na empresa
+            updateInsights(empresa, tab);
+            
+            // Animar mudanças
+            animateElements();
+        }
+
+        function updateInsights(empresa, tab) {
+            const tabContainer = document.getElementById(tab);
+            const insightCards = tabContainer.querySelectorAll('.insight-card');
+            
+            const insights = {
+                ALL: {
+                    title1: "🔥 Performance Consolidada",
+                    text1: "As duas empresas juntas superaram a meta mensal em <strong>8%</strong>.",
+                    title2: "⚠️ Gestão de Riscos Estratégica", 
+                    text2: "Com 2.303 unidades em estoque e R$ 1,19Bi em VGV disponível grupo, é crucial focar nos empreendimentos com maior volume de estoque <strong></strong>."
+                },
+                VICTA: {
+                    title1: "🏙️ VICTA - Consistência e Volume",
+                    text1: "A VICTA superou a meta mensal em <strong>5MM</strong>, mantendo consistência operacional",
+                    title2: "📈 Oportunidades VICTA",
+                    text2: "<strong>Vitória Eusébio</strong> (200% da meta) demonstram o potencial da marca."
+                },
+                DIAGONAL: {
+                    title1: "🏗️ DIAGONAL",
+                    text1: "A DIAGONAL alcançou impressionante <strong>9</strong> Vendas do Conect, Empreendimento está praticamente esgotado: apenas 1 unidade disponível no estoque..",
+                    title2: "🎯 Foco DIAGONAL",
+                    text2: "Com menor estoque (186 unidades) mas alta eficiência, a <strong>DIAGONAL</strong>"
+                }
+            };
+
+            if (insightCards.length >= 2) {
+                const currentInsight = insights[empresa];
+                insightCards[0].querySelector('.insight-title').textContent = currentInsight.title1;
+                insightCards[0].querySelector('p').innerHTML = currentInsight.text1;
+                insightCards[1].querySelector('.insight-title').textContent = currentInsight.title2;
+                insightCards[1].querySelector('p').innerHTML = currentInsight.text2;
+            }
+        }
+
+        function showTab(tabName) {
+            // Ocultar todos os conteúdos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remover classe ativa de todos os botões
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Mostrar conteúdo selecionado
+            document.getElementById(tabName).classList.add('active');
+
+            // Ativar botão selecionado
+            event.target.classList.add('active');
+
+            // Animar elementos quando a aba é carregada
+            setTimeout(() => {
+                animateElements();
+            }, 100);
+        }
+
+        function animateElements() {
+            // Animar barras de progresso
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 200);
+            });
+        }
+
+        // Animações iniciais
+        document.addEventListener('DOMContentLoaded', function() {
+            animateElements();
+
+            // Animar cards com delay escalonado
+            const cards = document.querySelectorAll('.summary-card, .quarterly-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Hover effects
+            const hoverCards = document.querySelectorAll('.summary-card, .quarterly-card, .insight-card');
+            hoverCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Adicionar efeitos aos botões de filtro
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                btn.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+        });
+    </script>
+<script>
+(function() {
+    const vsoData = {"ALL": {"mes": "6,63%", "ano": "11,72%", "t1": "4,30%", "t2": "5,75%"}, "VICTA": {"mes": "8,5%", "ano": "81,08%", "t1": "32,86%", "t2": "31,94%"}, "DIAGONAL": {"mes": "5,21%", "ano": "9,68%", "t1": "10,61%", "t2": "17,82%"}};
+    function setVSO(key) {
+        const data = vsoData[key] || vsoData.ALL;
+        document.getElementById('vso-mes').textContent = data.mes;
+        document.getElementById('vso-ano').textContent = data.ano;
+        document.getElementById('vso-1tri').textContent = data.t1;
+        document.getElementById('vso-2tri').textContent = data.t2;
+    }
+    window.setVSO = setVSO;
+    document.addEventListener('DOMContentLoaded', function() {
+        setVSO('ALL');
+    });
+})();
+</script>
+<script>
+(function() {
+  // Evita duplicar
+  if (window.__estoqueVgvPatched) return;
+  window.__estoqueVgvPatched = true;
+
+  // Valores calculados do CSV (linhas TOTAL)
+  const estoqueVgvByEmpresa = {"ALL": "R$ 1,19Bi", "VICTA": "R$ 567,2M", "DIAGONAL": "R$ 625,1M"};
+
+  function updateEstoqueVGVCard(empresaKey, tabId) {
+    try {
+      const tabEl = document.getElementById(tabId || 'consolidacao');
+      if (!tabEl) return;
+      const card = tabEl.querySelector('#card-estoque-vgv .card-value');
+      if (!card) return;
+      const key = (empresaKey === 'VICTA' || empresaKey === 'DIAGONAL') ? empresaKey : 'ALL';
+      card.textContent = estoqueVgvByEmpresa[key] || '-';
+    } catch(e) { /* silencioso */ }
+  }
+
+  // Enriquecer empresaData com vgvDisponivel (sem alterar o resto)
+  try {
+    if (window.empresaData) {
+      (['ALL','VICTA','DIAGONAL']).forEach(k => {
+        if (!window.empresaData[k]) return;
+        window.empresaData[k].vgvDisponivel = estoqueVgvByEmpresa[k];
+      });
+    }
+  } catch(e) { }
+
+  // Embrulha filterData SEM alterar sua lógica: chama original e depois atualiza o card
+  if (typeof window.filterData === 'function') {
+    const __oldFilterData = window.filterData;
+    window.filterData = function(empresa, tab) {
+      const result = __oldFilterData.apply(this, arguments);
+      updateEstoqueVGVCard(empresa, tab);
+      return result;
+    }
+  }
+
+  // Inicializa ao carregar página
+  document.addEventListener('DOMContentLoaded', function() {
+    updateEstoqueVGVCard('ALL', 'consolidacao');
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.__hidePerfCard) return;
+  window.__hidePerfCard = true;
+  function hidePerf(tabId){
+    try{
+      var tab = document.getElementById(tabId||'consolidacao');
+      if(!tab) return;
+      var cards = tab.querySelectorAll('.quarterly-card');
+      for (var i=0;i<cards.length;i++){
+        var t = cards[i].querySelector('.quarterly-title');
+        if (t && t.textContent.trim().toLowerCase() === 'performance'){
+          var v = cards[i].querySelector('.quarterly-value');
+          var s = cards[i].querySelector('.quarterly-subtitle');
+          if (v) v.textContent = '';
+          if (s) s.textContent = '';
+          var pb = cards[i].querySelector('.progress-bar');
+          if (pb) pb.innerHTML = '';
+        }
+      }
+    }catch(e){}
+  }
+  // Envolvemos filterData para limpar o card após a atualização
+  if (typeof window.filterData === 'function'){
+    var _old = window.filterData;
+    window.filterData = function(empresa, tab){
+      var r = _old.apply(this, arguments);
+      hidePerf(tab);
+      return r;
+    };
+  }
+  // Inicial na carga
+  document.addEventListener('DOMContentLoaded', function(){
+    hidePerf('consolidacao');
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.__quarterlyPatch) return;
+  window.__quarterlyPatch = true;
+  function updateQuarterlies(empresa, tabId){
+    try{
+      var tab = document.getElementById(tabId || 'consolidacao');
+      if(!tab) return;
+      var data = (window.empresaData || {})[empresa] || (window.empresaData || {}).ALL;
+      var cards = tab.querySelectorAll('.quarterly-card');
+      for (var i=0;i<cards.length;i++){
+        var title = cards[i].querySelector('.quarterly-title');
+        var value = cards[i].querySelector('.quarterly-value');
+        if (!title || !value) continue;
+        var t = title.textContent.trim().toUpperCase();
+        if (t.indexOf('META JULHO') >= 0) value.textContent = data.metaJulho || '';
+        else if (t.indexOf('REALIZADO JULHO') >= 0) value.textContent = data.realizadoJulho || '';
+        else if (t.indexOf('VGV JULHO') >= 0) value.textContent = data.vgvJulho || '';
+      }
+    }catch(e){}
+  }
+  if (typeof window.filterData === 'function'){
+    var _old = window.filterData;
+    window.filterData = function(empresa, tab){
+      var r = _old.apply(this, arguments);
+      updateQuarterlies(empresa, tab);
+      return r;
+    };
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    updateQuarterlies('ALL', 'consolidacao');
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.__hideVgvJulhoDiagonal) return;
+  window.__hideVgvJulhoDiagonal = true;
+
+  function clearVgvJulhoIfDiagonal(empresaKey, tabId){
+    try{
+      if (empresaKey !== 'DIAGONAL') return;
+      var tab = document.getElementById(tabId || 'consolidacao');
+      if (!tab) return;
+      var cards = tab.querySelectorAll('.quarterly-card');
+      for (var i=0; i<cards.length; i++){
+        var t = cards[i].querySelector('.quarterly-title');
+        if (t && t.textContent.trim().toUpperCase() === 'VGV JULHO'){
+          var v = cards[i].querySelector('.quarterly-value');
+          var s = cards[i].querySelector('.quarterly-subtitle');
+          if (v) v.textContent = '';
+          if (s) s.textContent = '';
+        }
+      }
+    }catch(e){}
+  }
+
+  // Envolve filterData para limpar após a atualização normal
+  if (typeof window.filterData === 'function'){
+    var _old = window.filterData;
+    window.filterData = function(empresa, tab){
+      var r = _old.apply(this, arguments);
+      clearVgvJulhoIfDiagonal(empresa, tab);
+      return r;
+    };
+  }
+
+  // Caso a página seja carregada já com DIAGONAL ativo na Consolidação
+  document.addEventListener('DOMContentLoaded', function(){
+    try{
+      // Detecta se na aba Consolidação existe botão DIAGONAL ativo
+      var tab = document.getElementById('consolidacao');
+      if (!tab) return;
+      var activeBtn = tab.querySelector('.filter-btn.active');
+      if (activeBtn && activeBtn.textContent.toUpperCase().indexOf('DIAGONAL') >= 0){
+        clearVgvJulhoIfDiagonal('DIAGONAL', 'consolidacao');
+      }
+    }catch(e){}
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.__toggleVgvJulhoCard) return;
+  window.__toggleVgvJulhoCard = true;
+
+  function toggleVgvJulho(empresaKey, tabId){
+    try{
+      var tab = document.getElementById(tabId || 'consolidacao');
+      if (!tab) return;
+      // acha o card "VGV Julho"
+      var targetCard = null;
+      var cards = tab.querySelectorAll('.quarterly-card');
+      for (var i=0;i<cards.length;i++){
+        var t = cards[i].querySelector('.quarterly-title');
+        if (t && t.textContent.trim().toUpperCase() === 'VGV JULHO'){
+          targetCard = cards[i];
+          break;
+        }
+      }
+      if (!targetCard) return;
+      // Para DIAGONAL: some o card por completo (display:none) — grid reorganiza
+      if (empresaKey === 'DIAGONAL') {
+        targetCard.style.display = 'none';
+      } else {
+        targetCard.style.display = ''; // restaura para ALL/VICTA
+      }
+    }catch(e){}
+  }
+
+  // Envolve filterData para aplicar a lógica após a atualização normal
+  if (typeof window.filterData === 'function'){
+    var _old = window.filterData;
+    window.filterData = function(empresa, tab){
+      var r = _old.apply(this, arguments);
+      toggleVgvJulho(empresa, tab);
+      return r;
+    };
+  }
+
+  // Estado inicial ao carregar a página
+  document.addEventListener('DOMContentLoaded', function(){
+    try{
+      var tab = document.getElementById('consolidacao');
+      if (!tab) return;
+      var activeBtn = tab.querySelector('.filter-btn.active');
+      var isDiag = activeBtn && activeBtn.textContent.toUpperCase().indexOf('DIAGONAL') >= 0;
+      toggleVgvJulho(isDiag ? 'DIAGONAL' : 'ALL', 'consolidacao');
+    }catch(e){}
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.__vsoFromCSV) return; 
+  window.__vsoFromCSV = true;
+
+  // Novos valores trazidos do CSV (apenas VSO Mês / 1TRI / 2TRI)
+  var novos = {
+    "ALL": {"mes":"8,59%", "t1":"30,84%", "t2":"30,63%"},
+    "VICTA": {"mes":"8,5%", "t1":"33%", "t2":"32%"},
+    "DIAGONAL": {"mes":"5,21%", "t1":"10,61%", "t2":"17,82%"},
+  };
+
+  try {
+    window.vsoData = window.vsoData || {}
+    ;['ALL','VICTA','DIAGONAL'].forEach(function(k){
+      var base = window.vsoData[k] || {};
+      base.mes = novos[k].mes;
+      base.t1  = novos[k].t1;
+      base.t2  = novos[k].t2;
+      window.vsoData[k] = base;
+    });
+  } catch(e) { }
+
+  function applyActive(){
+    try{
+      var tab = document.getElementById('consolidacao');
+      var activeBtn = tab && tab.querySelector('.filter-btn.active');
+      var key = 'ALL';
+      if (activeBtn){
+        var t = activeBtn.textContent.toUpperCase();
+        if (t.indexOf('VICTA')>=0 && t.indexOf('DIAGONAL')<0) key='VICTA';
+        else if (t.indexOf('DIAGONAL')>=0 && t.indexOf('VICTA')<0) key='DIAGONAL';
+        else key='ALL';
+      }
+      if (typeof setVSO === 'function') setVSO(key);
+    }catch(e){}
+  }
+
+  // Garante atualização após o filtro padrão
+  if (typeof window.filterData === 'function'){
+    var _old = window.filterData;
+    window.filterData = function(empresa, tab){
+      var r = _old.apply(this, arguments);
+      if (typeof setVSO === 'function') setVSO(empresa);
+      return r;
+    };
+  }
+
+  document.addEventListener('DOMContentLoaded', applyActive);
+})();
+</script>
+<script></script>
+<script>
+window.empresaData = {"ALL": {"vgv": "R$ 623,2M", "estoque": "2303", "vendidas": "1377", "situacoesCriticas": "4", "metaJulho": "150", "realizadoJulho": "168", "performance": "112%", "vgvJulho": "R$ 75,9M"}, "VICTA": {"vgv": "R$ 339,2M", "estoque": "2132", "vendidas": "1261", "situacoesCriticas": "3", "metaJulho": "141", "realizadoJulho": "150", "performance": "106%", "vgvJulho": "R$ 41,8M"}, "DIAGONAL": {"vgv": "R$ 284M", "estoque": "171", "vendidas": "116", "situacoesCriticas": "1", "metaJulho": "9", "realizadoJulho": "18", "performance": "200%", "vgvJulho": "R$ 34,1M"}};
+window.vsoData = {"ALL": {"mes": "6,62%", "ano": "53,97%", "t1": "17,20%", "t2": "23,01%", "t3": "13,47%", "t4": "0,00%"}, "VICTA": {"mes": "8,50%", "ano": "81,08%", "t1": "32,86%", "t2": "31,94%", "t3": "17,46%", "t4": "0,00%"}, "DIAGONAL": {"mes": "5,21%", "ano": "9,68%", "t1": "10,61%", "t2": "17,82%", "t3": "10,43%", "t4": "0,00%"}};
+function _applyEmpresaData(tabId, key) {
+  try {
+    var tab = document.getElementById(tabId);
+    var data = window.empresaData[key];
+    if (!tab || !data) return;
+    var cards = tab.querySelectorAll('.summary-card');
+    if (cards.length >= 3) {
+      cards[0].querySelector('.card-value').textContent = data.vgv;
+      cards[0].querySelector('.card-subtitle').textContent = data.vendidas + ' unidades vendidas';
+      cards[1].querySelector('.card-value').textContent = data.estoque;
+      cards[2].querySelector('.card-value').textContent = data.situacoesCriticas;
+    }
+    var quarterCards = tab.querySelectorAll('.quarterly-card');
+    if (quarterCards.length >= 4) {
+      quarterCards[0].querySelector('.quarterly-value').textContent = data.metaJulho;
+      quarterCards[1].querySelector('.quarterly-value').textContent = data.realizadoJulho;
+      quarterCards[2].querySelector('.quarterly-value').textContent = data.performance;
+      quarterCards[3].querySelector('.quarterly-value').textContent = data.vgvJulho;
+    }
+    function setText(id, val) { var el = document.getElementById(id); if (el) el.textContent = val || '-'; }
+    setText('vso-mes', window.vsoData[key].mes);
+    setText('vso-ano', window.vsoData[key].ano);
+    setText('vso-1tri', window.vsoData[key].t1);
+    setText('vso-2tri', window.vsoData[key].t2);
+    setText('vso-3tri', window.vsoData[key].t3);
+    setText('vso-4tri', window.vsoData[key].t4);
+  } catch(e) { console.warn(e); }
+}
+(function() {
+  var _origFilter = window.filterData;
+  window.filterData = function(empresa, tab) {
+    try { if (_origFilter) _origFilter.apply(this, arguments); } catch(e){}
+    var key = (empresa || 'ALL').toUpperCase();
+    if (!window.empresaData[key]) key = 'ALL';
+    _applyEmpresaData(tab || 'consolidacao', key);
+  };
+  document.addEventListener('DOMContentLoaded', function() { _applyEmpresaData('consolidacao', 'ALL'); });
+})();
+</script>
+
+<script>
+(function () {
+  function reorderVSO() {
+    var c = document.getElementById('vso-cards');
+    if (!c) return;
+    var ids = ['vso-mes','vso-1tri','vso-2tri','vso-3tri','vso-4tri','vso-ano'];
+    ids.map(function(id){
+      var el = document.getElementById(id);
+      return el ? el.closest('.quarterly-card') : null;
+    }).filter(Boolean).forEach(function(card){ c.appendChild(card); });
+  }
+  var _setVSO = window.setVSO;
+  window.setVSO = function(){ if (_setVSO) _setVSO.apply(this, arguments); reorderVSO(); };
+  var _filterData = window.filterData;
+  window.filterData = function(){ if (_filterData) _filterData.apply(this, arguments); };//reorder in DOMContentLoaded instead
+  document.addEventListener('DOMContentLoaded', reorderVSO);
+})();
+</script>
+</body></html>
